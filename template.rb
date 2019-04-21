@@ -104,3 +104,10 @@ file ".env.sample", %{
 DATABASE_USERNAME=USERNAME
 DATABASE_PASSWORD=PASSWORD
 }.strip
+
+append_to_file ".gitignore" do
+  <<-eos
+
+config/database.yml
+  eos
+end
